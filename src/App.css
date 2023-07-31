@@ -1,0 +1,247 @@
+/* #region page & common */
+:root {
+  --dark-slate-grey: #242742;
+  --charcoal-grey: #36384e;
+  --grey: #9294a0;
+  --tomato: #ff6257;
+}
+
+.hero__img {
+  width: 100%;
+}
+
+.title {
+  font-size: 2.34rem;
+  line-height: 40px;
+  color: var(--charcoal-grey);
+}
+
+.text {
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 20px 24px;
+  background: var(--dark-slate-grey);
+  font-size: .94rem;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:enabled:hover {
+  background: linear-gradient(90deg, rgba(255,98,87,1) 50%, rgba(255,115,0,1) 100%);
+  -webkit-box-shadow: 0px 10px 40px -4px rgba(255,98,87,1);
+  -moz-box-shadow: 0px 10px 40px -4px rgba(255,98,87,1);
+  box-shadow: 0px 10px 40px -4px rgba(255,98,87,1);
+}
+
+.button:disabled {
+  background-color: rgba(36, 41, 66, 0.5);
+  cursor: default;
+}
+
+.strong {
+  color: var(--charcoal-grey);
+  font-weight: bold;
+  letter-spacing: -0.04rem;
+}
+/* #endregion */
+
+/* #region benefits */
+.main {
+  margin: auto;
+  max-width: 425px;
+  min-width: 250px;
+  padding: 34px 24px;
+}
+
+.benefits-description {
+  margin: 24px 0;
+}
+
+.benefits {
+  position: relative;
+  padding-left: 36px;
+}
+
+.benefits > li {
+  margin-bottom: 10px;
+}
+
+.benefits > li::before {
+  content: url("./assets/images/icon-list.svg");
+  position: absolute;
+  left: 0;
+}
+/* #endregion */
+
+/* #region email */
+.email {
+  margin-top: 42px;
+}
+
+.form-control {
+  position: relative;
+}
+
+.email__label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: .7rem;
+  color: var(--tomato);
+  font-weight: 700;
+}
+
+.email__input-field {
+  width: 100%;
+  padding: 20px 24px;
+  border: 1px solid var(--grey);
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.email__input-field:focus {
+  outline: 1px solid black;
+}
+
+.input-error {
+  color: var(--tomato);
+  background-color: rgba(255, 98, 87, 0.2);
+  border: 1px solid var(--tomato);
+}
+/* #endregion */
+
+/* #region confirmed */
+.confirmed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 100;
+  overflow: auto;
+}
+
+.confirmed__content {
+  margin: auto;
+  max-width: 425px;
+  min-width: 250px;
+  padding: 150px 24px;
+}
+
+.confirmed__title {
+  margin-top: 34px;
+}
+
+.confirmed__text {
+  margin-top: 26px;
+}
+
+.confirmed__submit-btn {
+  margin-top: 262px;
+}
+/* #endregion */
+
+/* #region response */
+@media (min-width: 600px) {
+  body {
+    background-color: var(--charcoal-grey);
+  }
+  .wrapper {
+    max-width: 928px;
+    margin: 100px auto;
+    padding: 24px 24px 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 36px;
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(36,39,66,1);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(36,39,66,1);
+    box-shadow: 0px 0px 60px 0px rgba(36,39,66,1);
+  }
+
+  .hero__img {
+    content: url('./assets/images/illustration-sign-up-desktop.svg');
+  }
+
+  .main {
+    order: -1;
+    margin-right: 40px;
+  }
+
+  .confirmed {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--charcoal-grey);
+    z-index: 100;
+    overflow: auto;
+  }
+
+  .confirmed__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(36,39,66,1);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(36,39,66,1);
+    box-shadow: 0px 0px 60px 0px rgba(36,39,66,1);
+  }
+
+  .confirmed__content {
+    margin: auto;
+    max-width: 504px;
+    min-width: auto;
+    padding: 50px 64px 62px;
+    border-radius: 36px;
+  }
+
+  .confirmed__title {
+    line-height: 100%;
+    margin-top: 36px;
+  }
+
+  .confirmed__submit-btn {
+    margin-top: 42px;
+  }
+}
+
+@media (min-width: 920px) {
+  .wrapper {
+    margin: 220px auto;
+  }
+
+  .title {
+    font-size: 3.3rem;
+  }
+
+  .benefits-description {
+    margin: 20px 0;
+    padding-top: 15px;
+  }
+
+  .benefits {
+    padding-top: 4px;
+  }
+}
+/* #endregion */
