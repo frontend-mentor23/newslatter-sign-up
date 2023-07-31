@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import { DevTool } from "@hookform/devtools";
 
 const Email = ({ setConfirmed }) => {
-  const { register, handleSubmit, resetField, getValues, control, formState } = useForm();
+  const { register, handleSubmit, resetField, control, formState } = useForm();
   const { errors } = formState;
   const onSubmit = (data) => {
     setConfirmed(true);
