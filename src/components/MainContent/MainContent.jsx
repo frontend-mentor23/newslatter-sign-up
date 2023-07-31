@@ -4,14 +4,17 @@ import Confirmed from "./Confirmed/Confirmed";
 import Email from "./Email";
 
 const MainContent = () => {
-  const [isConfirmed, setConfirmed] = useState(false);
+  const [email, setEmail] = useState({
+    address: '',
+    isConfirmed: false
+  });
 
   return (
     <section className="main">
       <h1 className="title">Stay updated!</h1>
       <Benefits />
-      <Email setConfirmed={setConfirmed} />
-      {isConfirmed && <Confirmed setConfirmed={setConfirmed} />}
+      <Email setEmail={setEmail} />
+      {email.isConfirmed && <Confirmed email={email} setEmail={setEmail} />}
     </section>
   )
 }

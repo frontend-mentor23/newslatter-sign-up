@@ -1,13 +1,16 @@
 import { useForm } from "react-hook-form"
 import { DevTool } from "@hookform/devtools";
 
-const Email = ({ setConfirmed }) => {
+const Email = ({ setEmail }) => {
+  
   const { register, handleSubmit, resetField, control, formState } = useForm();
   const { errors } = formState;
+
   const onSubmit = (data) => {
-    setConfirmed(true);
+    setEmail({ address: data.email, isConfirmed: true });
     resetField("email");
   }
+
   return (
     <section className="email">
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
